@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://screenshot-to-living-page-16.lovable.app/ -->
+<html lang="en" class=" rkllt idc0_350"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./Günlük Beslenme Hedefleri — HUD_files/styles-D1j8WGFj.css" data-precedence="default"><link rel="stylesheet" href="./Günlük Beslenme Hedefleri — HUD_files/css2" data-precedence="default"><title>Günlük Beslenme Hedefleri — HUD</title><meta name="author" content="Lovable"><meta name="twitter:site" content="@Lovable"><meta name="description" content="Kalori, protein ve karbonhidrat hedeflerini neon HUD panelinde ayarlayın."><meta property="og:title" content="Günlük Beslenme Hedefleri — HUD"><meta property="og:description" content="Kalori, protein ve karbonhidrat hedeflerini neon HUD panelinde ayarlayın."><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><link rel="modulepreload" href="./Günlük Beslenme Hedefleri — HUD_files/index-6Afdeb0l.js.indir"><link rel="modulepreload" href="https://screenshot-to-living-page-16.lovable.app/assets/routes-CI5vRXdl.js"><link rel="icon" href="https://screenshot-to-living-page-16.lovable.app/favicon.ico" type="image/x-icon"><link rel="preconnect" href="https://fonts.googleapis.com/">
+<style>
+	#lovable-badge {
+		--badge-bg: #1b1b1b;
+		--badge-text: #c5c1b9;
+		--badge-text-hover: #dcdad5;
+		--badge-radius: 6px;
+		--badge-padding: 8px;
+		--badge-gap: 6px;
+		--badge-shadow: 
+			0 0 0 1px rgba(0, 0, 0, 0.88),
+			0 1px 0 0 rgba(0, 0, 0, 0.04),
+			0 2px 2px -1px rgba(0, 0, 0, 0.08),
+			0 4px 4px -2px rgba(0, 0, 0, 0.08),
+			0 8px 8px -4px rgba(0, 0, 0, 0.08),
+			0 16px 16px -8px rgba(0, 0, 0, 0.08);
+		--badge-transition-duration: 0.2s;
+		--badge-transition-easing: cubic-bezier(0.16, 1, 0.32, 1);
+		--focus-color: #575ECF;
+		--focus-offset: 2px;
+		--focus-width: 2px;
+		
+		position: fixed;
+		bottom: 12px;
+		right: 12px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		z-index: 1000000;
+		background-color: var(--badge-bg) !important;
+		color: var(--badge-text) !important;
+		border-radius: var(--badge-radius);
+		box-shadow: var(--badge-shadow) !important;
+		font-size: 12px;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+		font-weight: 400 !important;
+		text-transform: none !important;
+		font-feature-settings: normal !important;
+		transform: translateZ(0);
+		will-change: transform, opacity;
+		transition: opacity var(--badge-transition-duration) var(--badge-transition-easing);
+	}
+
+	#lovable-badge.closing {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	#lovable-badge-cta {
+		display: flex;
+		align-items: baseline;
+		gap: var(--badge-gap);
+		box-sizing: border-box;
+		padding: 4px var(--badge-padding) 0;
+		height: 100%;
+		color: inherit;
+		text-decoration: none;
+		white-space: nowrap;
+		border-radius: var(--badge-radius) 0 0 var(--badge-radius);
+		transition: 
+			background-color var(--badge-transition-duration) ease,
+			color var(--badge-transition-duration) ease,
+			transform 0.1s ease;
+	}
+
+	#lovable-badge-cta:hover {
+		background: rgba(255, 255, 255, 0.04);
+		color: var(--badge-text-hover);
+	}
+
+	#lovable-badge-cta:active {
+		transform: scale(0.98);
+	}
+
+	#lovable-badge-cta:focus {
+		outline: none;
+	}
+
+	#lovable-badge-cta:focus-visible {
+		outline: var(--focus-width) solid var(--focus-color);
+		outline-offset: var(--focus-offset);
+		z-index: 1;
+	}
+
+	#lovable-badge-text {
+		line-height: 1;
+	}
+
+	/* The wordmark baseline sits at y=12 of the 16px logo; an empty 12px box
+	   makes that the flex baseline so the text aligns to it on any system font. */
+	#lovable-badge-logo {
+		position: relative;
+		display: block;
+		width: 52px;
+		height: 12px;
+	}
+
+	#lovable-badge-logo svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#lovable-badge-divider {
+		width: 1px;
+		height: 24px;
+		background-color: rgba(255, 255, 255, 0.04);
+		flex-shrink: 0;
+	}
+
+	#lovable-badge-close {
+		width: 24px;
+		height: 24px;
+		min-width: 24px;
+		min-height: 24px;
+		cursor: pointer;
+		background: none;
+		border: none;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0 var(--badge-radius) var(--badge-radius) 0;
+		flex-shrink: 0;
+		transition: 
+			background-color var(--badge-transition-duration) ease,
+			transform 0.1s ease;
+	}
+
+	#lovable-badge-close:hover {
+		background: rgba(255, 255, 255, 0.04);
+	}
+
+	#lovable-badge-close:active {
+		transform: scale(0.92);
+	}
+
+	#lovable-badge-close:focus {
+		outline: none;
+	}
+
+	#lovable-badge-close:focus-visible {
+		outline: var(--focus-width) solid var(--focus-color);
+		outline-offset: calc(var(--focus-offset) * -1);
+		z-index: 1;
+	}
+
+	#lovable-badge-close svg path {
+		fill: var(--badge-text);
+		transition: fill var(--badge-transition-duration) ease;
+	}
+
+	#lovable-badge-close:hover svg path {
+		fill: var(--badge-text-hover);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		#lovable-badge,
+		#lovable-badge-cta,
+		#lovable-badge-close,
+		#lovable-badge-close svg path {
+			transition: none;
+		}
+		
+		#lovable-badge-cta:active,
+		#lovable-badge-close:active {
+			transform: none;
+		}
+	}
+
+	@media (prefers-contrast: high) {
+		#lovable-badge {
+			--badge-bg: #000;
+			--badge-text: #fff;
+			--badge-text-hover: #fff;
+			border: 2px solid currentColor;
+		}
+		
+		#lovable-badge-cta:focus-visible,
+		#lovable-badge-close:focus-visible {
+			outline-width: 3px;
+		}
+	}
+</style>
+<script defer="" src="./Günlük Beslenme Hedefleri — HUD_files/_flock.js.indir" data-proxy-url="/~api/analytics"></script><script defer="" src="./Günlük Beslenme Hedefleri — HUD_files/events.270c78a44fc53e7b.js.indir" data-artifact-kind="dwl_content_hash" data-artifact-id="a07f9ca5bdfd370c091f2967948210dab6080e4f65199273dc611c08093b7a04" data-commit-sha="a8c8cfed51a80148086c025937d56a0e4986e396" data-context-token="v1.eyJwcm9qZWN0X2lkIjoibG92cF8yYWptNTUxOXJ5ODZtODE0ZzFieGozdG54MyIsImFydGlmYWN0X2tpbmQiOiJkd2xfY29udGVudF9oYXNoIiwiYXJ0aWZhY3RfaWQiOiJhMDdmOWNhNWJkZmQzNzBjMDkxZjI5Njc5NDgyMTBkYWI2MDgwZTRmNjUxOTkyNzNkYzYxMWMwODA5M2I3YTA0IiwiY29tbWl0X3NoYSI6ImE4YzhjZmVkNTFhODAxNDgwODZjMDI1OTM3ZDU2YTBlNDk4NmUzOTYiLCJleHAiOjE3OTYxNDAwNTJ9.v7xFOlpSED5XsRaarxmnpqTBvecJa39xpOtHvkUH4aM"></script><meta name="twitter:title" content="Günlük Beslenme Hedefleri — HUD"><meta name="twitter:description" content="Kalori, protein ve karbonhidrat hedeflerini neon HUD panelinde ayarlayın."><meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_2ajm5519ry86m814g1bxj3tnx3/054e88fb75468d1e47e3c95da4603cd6_1793547788751.png"><meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_2ajm5519ry86m814g1bxj3tnx3/054e88fb75468d1e47e3c95da4603cd6_1793547788751.png"></head><body><!--$--><main class="flex min-h-screen items-center justify-center bg-hud-bg p-4"><div class="dark relative mx-auto aspect-[1568/790] w-full max-w-[420px] overflow-hidden rounded-2xl bg-hud-bg text-foreground [container-type:inline-size] sm:max-w-[720px]"><div class="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[120%] w-[55%] rounded-full hud-glow"></div><div class="relative flex h-full flex-col px-[5%] pb-[2%] pt-[2%]"><div class="flex items-start justify-between"><div class="min-w-0"><div class="font-mono text-[clamp(6px,1.8cqw,12px)] tracking-[0.3em] text-[var(--hud-pro)]">GÜNLÜK BESLENME MATRİSİ</div><h1 class="mt-[1%] font-display text-[clamp(12px,3.8cqw,20px)] font-bold leading-tight">Günlük Beslenme Hedefleri</h1><div class="flex items-center gap-2 text-[clamp(6px,1.6cqw,11px)] text-foreground/60"><span class="relative flex h-[0.6em] w-[0.6em]"><span class="absolute inset-0 animate-ping rounded-full bg-[var(--hud-carb)] opacity-70"></span><span class="relative h-full w-full rounded-full bg-[var(--hud-carb)]"></span></span>Gününüzü besleyen hedeflerin anlık görünümü</div></div><div class="flex shrink-0 items-center gap-[0.4em] rounded-full border border-[var(--hud-cyan)] bg-[color-mix(in_oklab,var(--hud-cyan)_10%,transparent)] px-[0.9em] py-[0.45em] text-[clamp(7px,2cqw,13px)] text-[var(--hud-pro)] shadow-[0_0_10px_rgba(18,185,239,0.4)]"><svg viewBox="0 0 24 24" class="hud-spin h-[1.1em] w-[1.1em]" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16M3 12a9 9 0 0 1 15.5-6.2L21 8M21 3v5h-5M3 21v-5h5"></path></svg>Canlı Sync</div></div><div class="mt-[2.5%] grid min-h-0 flex-1 grid-cols-[repeat(3,minmax(0,1fr))] grid-rows-[minmax(0,1fr)] gap-[3%]"><div class="hud-card relative z-[2] flex min-h-0 min-w-0 flex-col overflow-hidden rounded-[9%/6%] border-[1.5px] p-[5%]" style="border-color:var(--hud-cal);box-shadow:0 0 14px color-mix(in oklab, var(--hud-cal) 55%, transparent), inset 0 0 0 1px rgba(255,255,255,0.03), inset 0 2px 12px rgba(0,0,0,0.8)"><div class="pointer-events-none absolute inset-0 z-[1]" aria-hidden="true"><span class="absolute rounded-full" style="left:12%;top:18%;width:3.5px;height:3.5px;background:var(--hud-cal);box-shadow:0 0 6px var(--hud-cal), 0 0 10px var(--hud-cal);animation:hud-drift 4.2s ease-in-out 0s infinite"></span><span class="absolute rounded-full" style="left:78%;top:30%;width:2px;height:2px;background:var(--hud-cal);box-shadow:0 0 6px var(--hud-cal), 0 0 10px var(--hud-cal);animation:hud-drift 5.1s ease-in-out 0.8s infinite"></span><span class="absolute rounded-full" style="left:30%;top:72%;width:2.8px;height:2.8px;background:var(--hud-cal);box-shadow:0 0 6px var(--hud-cal), 0 0 10px var(--hud-cal);animation:hud-drift 4.7s ease-in-out 1.6s infinite"></span><span class="absolute rounded-full" style="left:85%;top:80%;width:2.2px;height:2.2px;background:var(--hud-cal);box-shadow:0 0 6px var(--hud-cal), 0 0 10px var(--hud-cal);animation:hud-drift 5.6s ease-in-out 2.3s infinite"></span></div><div class="relative z-[2] flex min-w-0 items-center gap-[6%]"><div class="grid aspect-square w-[16%] shrink-0 place-items-center rounded-[22%] text-foreground" style="background:linear-gradient(145deg, var(--hud-cal), color-mix(in oklab, var(--hud-cal) 60%, black))"><svg viewBox="0 0 24 24" class="h-[60%] w-[60%]" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div><div class="min-w-0"><div class="truncate text-[clamp(7px,2.2cqw,12px)] font-medium text-foreground">Kalori Hedefi</div><div class="font-mono text-[clamp(8px,2.4cqw,13px)] font-bold" style="color:#ffb300">kcal</div></div></div><div class="mt-[4%] flex items-center gap-[5%]"><div class="h-[clamp(2px,0.8cqw,3px)] flex-1 rounded-full bg-foreground/15"><div class="h-full rounded-full" style="width:58%;transition:width 0.4s ease, box-shadow 0.4s ease;background:linear-gradient(90deg, color-mix(in oklab, var(--hud-cal) 70%, white), var(--hud-cal));box-shadow:0 0 8px var(--hud-cal)"></div></div><span class="font-mono text-[clamp(6px,1.8cqw,11px)] text-foreground/70">%<!-- -->58</span></div><div class="flex min-h-0 flex-1 items-center justify-center py-[4%]"><div class="aspect-square h-full max-w-[62%] overflow-hidden rounded-full" style="box-shadow:0 0 18px color-mix(in oklab, var(--hud-cal) 35%, transparent)"><img src="./Günlük Beslenme Hedefleri — HUD_files/plate-cal-B1GSsg0r.jpg" alt="Kalori Hedefi" width="816" height="816" loading="lazy" class="h-full w-full scale-[1.12] object-cover"></div></div><div class="mt-auto flex items-center justify-between rounded-full border border-foreground/10 bg-foreground/[0.03] p-[3%]"><button aria-label="Azalt" style="--c:var(--hud-cal)" class="grid aspect-square w-[22%] shrink-0 place-items-center rounded-full border-[1.5px] border-[var(--c)] text-foreground/90 transition-all duration-150 hover:bg-[color-mix(in_oklab,var(--c)_20%,transparent)] hover:shadow-[0_0_10px_var(--c)] active:scale-[0.92]"><span class="text-[clamp(9px,3cqw,15px)] leading-none">−</span></button><button type="button" aria-label="Kalori Hedefi değeri — düzenlemek için tıkla" class="font-mono text-[clamp(9px,3.2cqw,17px)] font-bold tabular-nums text-foreground min-w-[4ch] cursor-text text-center leading-none">2500</button><button aria-label="Artır" style="--c:var(--hud-cal)" class="grid aspect-square w-[22%] shrink-0 place-items-center rounded-full border-[1.5px] border-[var(--c)] text-foreground/90 transition-all duration-150 hover:bg-[color-mix(in_oklab,var(--c)_20%,transparent)] hover:shadow-[0_0_10px_var(--c)] active:scale-[0.92]"><span class="text-[clamp(9px,3cqw,15px)] leading-none">+</span></button></div></div><div class="hud-card relative z-[2] flex min-h-0 min-w-0 flex-col overflow-hidden rounded-[9%/6%] border-[1.5px] p-[5%]" style="border-color:var(--hud-pro);box-shadow:0 0 14px color-mix(in oklab, var(--hud-pro) 55%, transparent), inset 0 0 0 1px rgba(255,255,255,0.03), inset 0 2px 12px rgba(0,0,0,0.8)"><div class="pointer-events-none absolute inset-0 z-[1]" aria-hidden="true"><span class="absolute rounded-full" style="left:12%;top:18%;width:3.5px;height:3.5px;background:var(--hud-pro);box-shadow:0 0 6px var(--hud-pro), 0 0 10px var(--hud-pro);animation:hud-drift 4.2s ease-in-out 0s infinite"></span><span class="absolute rounded-full" style="left:78%;top:30%;width:2px;height:2px;background:var(--hud-pro);box-shadow:0 0 6px var(--hud-pro), 0 0 10px var(--hud-pro);animation:hud-drift 5.1s ease-in-out 0.8s infinite"></span><span class="absolute rounded-full" style="left:30%;top:72%;width:2.8px;height:2.8px;background:var(--hud-pro);box-shadow:0 0 6px var(--hud-pro), 0 0 10px var(--hud-pro);animation:hud-drift 4.7s ease-in-out 1.6s infinite"></span><span class="absolute rounded-full" style="left:85%;top:80%;width:2.2px;height:2.2px;background:var(--hud-pro);box-shadow:0 0 6px var(--hud-pro), 0 0 10px var(--hud-pro);animation:hud-drift 5.6s ease-in-out 2.3s infinite"></span></div><div class="relative z-[2] flex min-w-0 items-center gap-[6%]"><div class="grid aspect-square w-[16%] shrink-0 place-items-center rounded-[22%] text-foreground" style="background:linear-gradient(145deg, var(--hud-pro), color-mix(in oklab, var(--hud-pro) 60%, black))"><svg viewBox="0 0 24 24" class="h-[60%] w-[60%]" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg></div><div class="min-w-0"><div class="truncate text-[clamp(7px,2.2cqw,12px)] font-medium text-foreground">Protein Hedefi</div><div class="font-mono text-[clamp(8px,2.4cqw,13px)] font-bold" style="color:var(--hud-pro)">g</div></div></div><div class="mt-[4%] flex items-center gap-[5%]"><div class="h-[clamp(2px,0.8cqw,3px)] flex-1 rounded-full bg-foreground/15"><div class="h-full rounded-full" style="width:47%;transition:width 0.4s ease, box-shadow 0.4s ease;background:linear-gradient(90deg, color-mix(in oklab, var(--hud-pro) 70%, white), var(--hud-pro));box-shadow:0 0 8px var(--hud-pro)"></div></div><span class="font-mono text-[clamp(6px,1.8cqw,11px)] text-foreground/70">%<!-- -->47</span></div><div class="flex min-h-0 flex-1 items-center justify-center py-[4%]"><div class="aspect-square h-full max-w-[62%] overflow-hidden rounded-full" style="box-shadow:0 0 18px color-mix(in oklab, var(--hud-pro) 35%, transparent)"><img src="./Günlük Beslenme Hedefleri — HUD_files/plate-pro-CX0TedGr.jpg" alt="Protein Hedefi" width="816" height="816" loading="lazy" class="h-full w-full scale-[1.12] object-cover"></div></div><div class="mt-auto flex items-center justify-between rounded-full border border-foreground/10 bg-foreground/[0.03] p-[3%]"><button aria-label="Azalt" style="--c:var(--hud-pro)" class="grid aspect-square w-[22%] shrink-0 place-items-center rounded-full border-[1.5px] border-[var(--c)] text-foreground/90 transition-all duration-150 hover:bg-[color-mix(in_oklab,var(--c)_20%,transparent)] hover:shadow-[0_0_10px_var(--c)] active:scale-[0.92]"><span class="text-[clamp(9px,3cqw,15px)] leading-none">−</span></button><button type="button" aria-label="Protein Hedefi değeri — düzenlemek için tıkla" class="font-mono text-[clamp(9px,3.2cqw,17px)] font-bold tabular-nums text-foreground min-w-[4ch] cursor-text text-center leading-none">180</button><button aria-label="Artır" style="--c:var(--hud-pro)" class="grid aspect-square w-[22%] shrink-0 place-items-center rounded-full border-[1.5px] border-[var(--c)] text-foreground/90 transition-all duration-150 hover:bg-[color-mix(in_oklab,var(--c)_20%,transparent)] hover:shadow-[0_0_10px_var(--c)] active:scale-[0.92]"><span class="text-[clamp(9px,3cqw,15px)] leading-none">+</span></button></div></div><div class="hud-card relative z-[2] flex min-h-0 min-w-0 flex-col overflow-hidden rounded-[9%/6%] border-[1.5px] p-[5%]" style="border-color:var(--hud-carb);box-shadow:0 0 14px color-mix(in oklab, var(--hud-carb) 55%, transparent), inset 0 0 0 1px rgba(255,255,255,0.03), inset 0 2px 12px rgba(0,0,0,0.8)"><div class="pointer-events-none absolute inset-0 z-[1]" aria-hidden="true"><span class="absolute rounded-full" style="left:12%;top:18%;width:3.5px;height:3.5px;background:var(--hud-carb);box-shadow:0 0 6px var(--hud-carb), 0 0 10px var(--hud-carb);animation:hud-drift 4.2s ease-in-out 0s infinite"></span><span class="absolute rounded-full" style="left:78%;top:30%;width:2px;height:2px;background:var(--hud-carb);box-shadow:0 0 6px var(--hud-carb), 0 0 10px var(--hud-carb);animation:hud-drift 5.1s ease-in-out 0.8s infinite"></span><span class="absolute rounded-full" style="left:30%;top:72%;width:2.8px;height:2.8px;background:var(--hud-carb);box-shadow:0 0 6px var(--hud-carb), 0 0 10px var(--hud-carb);animation:hud-drift 4.7s ease-in-out 1.6s infinite"></span><span class="absolute rounded-full" style="left:85%;top:80%;width:2.2px;height:2.2px;background:var(--hud-carb);box-shadow:0 0 6px var(--hud-carb), 0 0 10px var(--hud-carb);animation:hud-drift 5.6s ease-in-out 2.3s infinite"></span></div><div class="relative z-[2] flex min-w-0 items-center gap-[6%]"><div class="grid aspect-square w-[16%] shrink-0 place-items-center rounded-[22%] text-foreground" style="background:linear-gradient(145deg, var(--hud-carb), color-mix(in oklab, var(--hud-carb) 60%, black))"><svg viewBox="0 0 24 24" class="h-[60%] w-[60%]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22 16 8M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94ZM7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94ZM11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94ZM20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z"></path></svg></div><div class="min-w-0"><div class="truncate text-[clamp(7px,2.2cqw,12px)] font-medium text-foreground">Karb Hedefi</div><div class="font-mono text-[clamp(8px,2.4cqw,13px)] font-bold" style="color:#ffb300">g</div></div></div><div class="mt-[4%] flex items-center gap-[5%]"><div class="h-[clamp(2px,0.8cqw,3px)] flex-1 rounded-full bg-foreground/15"><div class="h-full rounded-full" style="width:70%;transition:width 0.4s ease, box-shadow 0.4s ease;background:linear-gradient(90deg, color-mix(in oklab, var(--hud-carb) 70%, white), var(--hud-carb));box-shadow:0 0 8px var(--hud-carb)"></div></div><span class="font-mono text-[clamp(6px,1.8cqw,11px)] text-foreground/70">%<!-- -->70</span></div><div class="flex min-h-0 flex-1 items-center justify-center py-[4%]"><div class="aspect-square h-full max-w-[62%] overflow-hidden rounded-full" style="box-shadow:0 0 18px color-mix(in oklab, var(--hud-carb) 35%, transparent)"><img src="./Günlük Beslenme Hedefleri — HUD_files/plate-carb-D9h8944P.jpg" alt="Karb Hedefi" width="816" height="816" loading="lazy" class="h-full w-full scale-[1.12] object-cover"></div></div><div class="mt-auto flex items-center justify-between rounded-full border border-foreground/10 bg-foreground/[0.03] p-[3%]"><button aria-label="Azalt" style="--c:var(--hud-carb)" class="grid aspect-square w-[22%] shrink-0 place-items-center rounded-full border-[1.5px] border-[var(--c)] text-foreground/90 transition-all duration-150 hover:bg-[color-mix(in_oklab,var(--c)_20%,transparent)] hover:shadow-[0_0_10px_var(--c)] active:scale-[0.92]"><span class="text-[clamp(9px,3cqw,15px)] leading-none">−</span></button><button type="button" aria-label="Karb Hedefi değeri — düzenlemek için tıkla" class="font-mono text-[clamp(9px,3.2cqw,17px)] font-bold tabular-nums text-foreground min-w-[4ch] cursor-text text-center leading-none">300</button><button aria-label="Artır" style="--c:var(--hud-carb)" class="grid aspect-square w-[22%] shrink-0 place-items-center rounded-full border-[1.5px] border-[var(--c)] text-foreground/90 transition-all duration-150 hover:bg-[color-mix(in_oklab,var(--c)_20%,transparent)] hover:shadow-[0_0_10px_var(--c)] active:scale-[0.92]"><span class="text-[clamp(9px,3cqw,15px)] leading-none">+</span></button></div></div></div></div></div></main><!--/$--><script type="module" async="" src="./Günlük Beslenme Hedefleri — HUD_files/index-6Afdeb0l.js.indir"></script>
+<aside id="lovable-badge" role="complementary" dir="ltr" lang="en" aria-label="Edit with Lovable">
+	<a id="lovable-badge-cta" target="_blank" href="https://lovable.dev/projects/lovp_2ajm5519ry86m814g1bxj3tnx3?utm_source=lovable-badge" rel="noopener nofollow" aria-label="Edit with Lovable">
+		<span id="lovable-badge-text">Edit with</span>
+		<span id="lovable-badge-logo"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="16" fill="none" viewBox="0 0 52 16">
+  <path fill="#FCFBF8" fill-rule="evenodd" d="M20.318 5.25c.643 0 1.206.14 1.69.418a2.81 2.81 0 0 1 1.118 1.191c.266.513.4 1.115.4 1.807s-.134 1.296-.4 1.812a2.81 2.81 0 0 1-1.118 1.193c-.484.278-1.047.418-1.69.418s-1.208-.14-1.695-.418a2.85 2.85 0 0 1-1.125-1.193c-.262-.516-.393-1.12-.393-1.812s.131-1.294.393-1.807a2.848 2.848 0 0 1 1.125-1.191c.487-.279 1.052-.418 1.695-.418Zm0 1.425c-.27 0-.504.076-.7.228-.193.147-.34.37-.443.67-.102.295-.153.66-.153 1.093 0 .435.05.801.153 1.1.102.3.25.524.443.676.196.147.43.22.7.22.27 0 .502-.073.694-.22.193-.152.341-.375.443-.67.103-.299.153-.667.153-1.106 0-.65-.112-1.145-.337-1.481a1.08 1.08 0 0 0-.953-.51ZM32.7 5.25c.61 0 1.127.1 1.549.3.422.197.74.48.953.849.217.368.325.809.325 1.32v2.704c0 .29.02.562.062.812.044.245.108.4.19.466V12h-1.935a5.895 5.895 0 0 1-.105-.684 7.745 7.745 0 0 1-.02-.228 2.293 2.293 0 0 1-.151.203c-.205.242-.47.437-.793.584-.32.143-.685.215-1.094.215-.406 0-.77-.08-1.094-.24a1.845 1.845 0 0 1-.756-.682 1.984 1.984 0 0 1-.27-1.045c0-.606.178-1.069.535-1.388.356-.324.87-.534 1.542-.633l1.125-.16c.225-.032.403-.074.534-.123a.622.622 0 0 0 .288-.196.549.549 0 0 0 .093-.327.65.65 0 0 0-.11-.367.702.702 0 0 0-.32-.27c-.14-.07-.31-.105-.51-.105-.32 0-.576.083-.768.251-.193.164-.298.39-.314.676h-1.923c.016-.434.147-.82.393-1.155.25-.34.596-.604 1.039-.792.442-.189.954-.283 1.535-.283Zm.99 3.498a.98.98 0 0 1-.215.14 2.49 2.49 0 0 1-.584.178l-.473.092c-.315.061-.553.156-.713.283-.155.127-.233.305-.233.534 0 .23.084.412.252.547.168.135.383.203.645.203s.494-.058.694-.173c.201-.118.355-.282.461-.49.11-.21.166-.448.166-.714v-.6Zm4.526-2.375c.065-.125.138-.243.221-.349.197-.25.437-.44.719-.571.282-.135.6-.203.952-.203.528 0 .988.138 1.377.412.389.275.688.67.896 1.186.21.512.314 1.12.314 1.824 0 .7-.107 1.309-.32 1.825-.213.512-.518.906-.915 1.18-.393.275-.854.412-1.383.412-.352 0-.667-.062-.946-.184a1.832 1.832 0 0 1-.7-.554 2.2 2.2 0 0 1-.234-.383V12h-1.843V3h1.862v3.373Zm1.284.296c-.274 0-.51.085-.707.253-.192.163-.338.397-.436.7a3.376 3.376 0 0 0-.148 1.05c0 .406.05.759.148 1.058.098.299.243.53.436.694.197.164.433.246.707.246.279 0 .512-.082.7-.246.193-.164.336-.395.43-.694.099-.3.148-.652.148-1.058 0-.405-.05-.757-.147-1.056-.095-.299-.238-.53-.43-.694a1.015 1.015 0 0 0-.7-.253Zm9.416-1.419c.602 0 1.136.131 1.604.393.466.262.829.643 1.086 1.143.263.5.394 1.097.394 1.794 0 .25-.002.449-.006.596H47.51c.018.288.071.538.164.75a1.3 1.3 0 0 0 .491.596c.214.13.465.196.757.196.319 0 .583-.082.792-.246.209-.167.34-.403.393-.706h1.862a2.48 2.48 0 0 1-.485 1.235 2.54 2.54 0 0 1-1.051.805c-.439.188-.949.283-1.53.283-.655 0-1.225-.125-1.708-.375a2.672 2.672 0 0 1-1.13-1.143c-.267-.508-.4-1.137-.4-1.887 0-.712.14-1.327.418-1.843a2.86 2.86 0 0 1 1.155-1.186c.491-.27 1.051-.405 1.678-.405Zm-.044 1.345c-.274 0-.516.068-.725.203a1.29 1.29 0 0 0-.479.59 2.045 2.045 0 0 0-.132.498h2.562a1.873 1.873 0 0 0-.138-.602 1.061 1.061 0 0 0-.418-.516 1.243 1.243 0 0 0-.67-.173Z" clip-rule="evenodd"></path>
+  <path fill="#FCFBF8" d="m26.605 9.995 1.342-4.566h1.924L27.628 12h-2.07l-2.33-6.57h1.98l1.397 4.565Zm-13.013.143h2.256c1.632 0 1.421 1.837 1.418 1.861h-5.603V3h1.93v7.138Zm31.516 1.861h-1.862V3h1.862v8.999Z"></path>
+  <path fill="url(#a)" fill-rule="evenodd" d="M2.7 3c1.492 0 2.7 1.192 2.7 2.663v1.012h.9c1.49 0 2.7 1.192 2.7 2.662S7.791 12 6.3 12H0V5.663C0 4.193 1.209 3 2.7 3Z" clip-rule="evenodd"></path>
+  <defs>
+    <radialgradient id="a" cx="0" cy="0" r="1" gradientTransform="matrix(-1.54236 7.07838 -10.231 -2.15602 4.627 5.022)" gradientUnits="userSpaceOnUse">
+      <stop offset=".106" stop-color="#FE7B02"></stop>
+      <stop offset=".394" stop-color="#FE3F21"></stop>
+      <stop offset=".608" stop-color="#F858BC"></stop>
+      <stop offset=".929" stop-color="#575ECF"></stop>
+    </radialgradient>
+  </defs>
+</svg>
+
+</span>
+	</a>
+	
+	<span id="lovable-badge-divider" aria-hidden="true"></span>
+	
+	<button id="lovable-badge-close" aria-label="Dismiss" title="Dismiss" type="button">
+		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+			<path d="M10.646 4.646a.5.5 0 1 1 .707.708L8.707 8l2.646 2.646a.5.5 0 1 1-.707.707L8 8.707l-2.646 2.646a.5.5 0 1 1-.708-.707L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708L8 7.293l2.646-2.647Z"></path>
+		</svg>
+	</button>
+</aside>
+<script>
+	(() => {
+		if (window.self !== window.top || navigator.userAgent.includes('puppeteer')) {
+			const badge = document.querySelector('#lovable-badge');
+			if (badge) {
+				badge.style.display = 'none';
+			}
+			return;
+		}
+
+		const closeButton = document.querySelector('#lovable-badge-close');
+		if (closeButton) {
+			closeButton.addEventListener('click', function(event) {
+				event.preventDefault();
+				event.stopPropagation();
+				const badge = document.querySelector('#lovable-badge');
+				if (badge) {
+					badge.classList.add('closing');
+					setTimeout(function() {
+						if (badge) {
+							badge.style.display = 'none';
+						}
+					}, 240);
+				}
+			});
+		}
+	})();
+</script>
+</body></html>
